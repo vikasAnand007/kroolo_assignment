@@ -51,7 +51,7 @@ const Header = () => {
               alignItems: "center",
             }}
           >
-            <Box sx={{}}>
+            <Box>
               <Typography sx={{ fontSize: "11px", marginBottom: 0.5 }}>
                 Workspace
               </Typography>
@@ -81,6 +81,16 @@ const Header = () => {
           open={isMobileSidebarOpen}
           onClose={() => toggleSidebar(false)}
         >
+          <Box sx={{ padding: 1 }}>
+            <Typography sx={{ fontSize: "11px", marginBottom: 0.5 }}>
+              Workspace
+            </Typography>
+            <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+              <img style={{ width: "20px" }} src="/home.svg" />
+              <Typography sx={{ fontSize: "13px" }}>Demo Workspace</Typography>
+            </Box>
+          </Box>
+          <Divider />
           <SidebarItems />
         </Drawer>
       </Box>

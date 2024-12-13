@@ -26,7 +26,6 @@ import TextSnippetOutlinedIcon from "@mui/icons-material/TextSnippetOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import AlignVerticalBottomOutlinedIcon from "@mui/icons-material/AlignVerticalBottomOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
-import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import FilterListOutlinedIcon from "@mui/icons-material/FilterListOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
@@ -118,6 +117,7 @@ const MainArea: React.FC = () => {
           display: "flex",
           justifyContent: "space-between",
           padding: "18px",
+          flexWrap: "wrap",
         }}
       >
         <Box sx={{ display: "flex", gap: 2 }}>
@@ -144,7 +144,7 @@ const MainArea: React.FC = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ display: "flex", gap: 3, alignItems: "center" }}>
+        <Box sx={{ display: "flex", gap: 3, alignItems: "center", flexWrap: "wrap", }}>
           <Button
             sx={{ textTransform: "none" }}
             variant="outlined"
@@ -205,9 +205,10 @@ const MainArea: React.FC = () => {
             display: "flex",
             justifyContent: "space-between",
             gap: 2,
+            flexWrap: "wrap",
           }}
         >
-          <Box sx={{ display: "flex", gap: 2, overflowX: "auto" }}>
+          <Box sx={{ display: "flex", gap: 2, maxWidth: "100vw", overflowX: "auto" }}>
             {tablist.map((elem) => {
               return (
                 <Box
@@ -225,14 +226,6 @@ const MainArea: React.FC = () => {
             })}
           </Box>
           <Box sx={{ display: "flex", gap: 2 }}>
-            {/* <Button
-              sx={{ textTransform: "none" }}
-              variant="outlined"
-              size="small"
-              endIcon={<KeyboardArrowDownOutlinedIcon />}
-            >
-              Sync Repos
-            </Button> */}
             <SyncAction />
             <Button
               sx={{ textTransform: "none" }}
@@ -252,6 +245,7 @@ const MainArea: React.FC = () => {
             paddingX: "18px",
             display: "flex",
             justifyContent: "space-between",
+            flexWrap: "wrap",
           }}
         >
           <Box
@@ -357,7 +351,8 @@ const MainArea: React.FC = () => {
         </Box>
         <Divider sx={{ backgroundColor: "#eaebf0", marginTop: 1 }} />
       </Box>
-      <Box sx={{ marginBottom: 1 }}>
+      <Box sx={{ marginBottom: 1, overflow: "auto", maxWidth: "100vw" }}>
+        
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
