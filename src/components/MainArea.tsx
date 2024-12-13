@@ -40,6 +40,7 @@ import ProfileAction from "./ProfileAction";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
 import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
+import SyncAction from "./SyncAction";
 
 const tablist = [
   {
@@ -224,14 +225,15 @@ const MainArea: React.FC = () => {
             })}
           </Box>
           <Box sx={{ display: "flex", gap: 2 }}>
-            <Button
+            {/* <Button
               sx={{ textTransform: "none" }}
               variant="outlined"
               size="small"
               endIcon={<KeyboardArrowDownOutlinedIcon />}
             >
               Sync Repos
-            </Button>
+            </Button> */}
+            <SyncAction />
             <Button
               sx={{ textTransform: "none" }}
               variant="outlined"
